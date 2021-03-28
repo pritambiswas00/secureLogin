@@ -51,7 +51,7 @@ app.use((req, res, next) => {
 })
 
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 5000
 
 const DB_Connection = process.env.MONGODB_URI;
 
