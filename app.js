@@ -55,7 +55,7 @@ const PORT = process.env.PORT
 
 const DB_Connection = process.env.MONGODB_URI;
 
-mongoose.connect(DB_Connection, { useNewUrlParser : true }).then(()=> console.log('Connection is established')).catch((error) => console.log(error))
+mongoose.connect(DB_Connection, { useNewUrlParser : true, useUnifiedTopology: true }).then(()=> console.log('Connection is established')).catch((error) => console.log(error))
 
 app.use('/', require('./routes/index'))
 app.use('/users', require('./routes/users'))
